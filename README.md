@@ -25,7 +25,18 @@ There are **3 sources** of data for this research:
 ## Methodology
 
 The data is split into **2 groups**. First group represents weights that reduce
-a state's attractiveness for employees. Typical examples of the first group are
-weight of people below poverty line, median house value or weight of mortgage in
-a household's monthly expenses. Second group represents values that maximize a
-state's 
+a state's attractiveness for employees. Typical examples of this class are
+weight of people below poverty line, median house value or share of mortgage in
+a household's monthly expenses. Second category constitutes the factors which
+are valuable for job-seekers like median salary, skewness of wage distribution,
+average high temperature and number of open jobs.
+
+Some weights are highly correlated like a number of people with disability and
+a share of poor people. Variables with strong relationship shift the result of the
+research. PCA is performed to replace the related features with independent 
+principal components to avoid bias. There are **7 elements** that explain **90%**
+of variation.
+
+Values from each of 2 groups are ranked. Then the genetic algorithm is applied
+to minimize weight while maximizing value using [GA](https://cran.r-project.org/web/packages/GA/index.html) library in `R`.
+
