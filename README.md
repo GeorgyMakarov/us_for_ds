@@ -18,4 +18,4 @@ There are **3 sources** of data for this research:
 
 - US census data from [US Census Bureau](https://www.census.gov/quickfacts/fact/table/US/PST045221)
 
-
+- US occupational and wage statistics from [US Bureau of labor statistics](https://www.bls.gov/oes/current/oes152051.htm)
