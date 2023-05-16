@@ -12,7 +12,7 @@ This repository takes open source data describing life in US states by multiple
 dimensions and uses genetic algorithm to pick top-5 states, where a data scientist
 can earn a lot and live a comfortable life both in economic and in social areas.
 
-# Data sources
+## Data sources
 
 There are **3 sources** of data for this research:
 
@@ -22,3 +22,10 @@ There are **3 sources** of data for this research:
 
 - [LinkedIn](https://www.linkedin.com) data on open jobs
 
+## Methodology
+
+The data is split into **2 groups**. First group represents weights that reduce
+a state's attractiveness for employees. Typical examples of the first group are
+weight of people below poverty line, median house value or weight of mortgage in
+a household's monthly expenses. Second group represents values that maximize a
+state's 
