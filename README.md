@@ -40,3 +40,15 @@ of variation.
 Values from each of 2 groups are ranked. Then the genetic algorithm is applied
 to minimize weight while maximizing value using [GA](https://cran.r-project.org/web/packages/GA/index.html) library in `R`.
 
+## Results
+
+Top-5 states picked by the algorithm:
+
+- Virginia  
+- North Carolina  
+- Delaware  
+- Texas  
+- Georgia  
+
+These results are very well in line with the official [employment map](https://www.bls.gov/oes/current/se152051.png) and pretty much intersect with
+other researches made by [Zippia](https://www.zippia.com/data-scientist-jobs/best-states/) or other [researchers](https://odsc.medium.com/13-best-cities-on-the-planet-to-get-hired-as-a-data-scientist-ccea881ee899) some time ago.
