@@ -1,0 +1,18 @@
+source('extract_raw_data.R')
+
+# Add new computed columns
+df[['active_build']]     <- round(df[['building_permits']] * 100 / df[['housing_units']], 2)
+df[['vet_wt']]           <- round(df[['veterans']] * 100 / df[['pop_est']], 2)
+df[['people_per_unit']]  <- round(df[['pop_est']] / df[['housing_units']], 2)
+df[['years_mortgage']]   <- round((df[['home_val']] / (df[['life_cost']] - df[['no_mortgage']]))/12, 2)
+df[['rest_cost']]        <- round(df[['restaurants']] * 1000 / df[['pop_est']], 0)
+df[['social_percap']]    <- round((df[['social']] * 1000) / (df[['pop_est']] * ((df[['under18']] + df[['over65']]) / 100)), 0)
+df[['transport_wt']]     <- round(df[['transport']] * 100 / df[['retail']], 2)
+df[['retail_percap']]    <- round(df[['retail']] * 1000 / df[['pop_est']], 0)
+df[['house_rep_net']]    <- round(df[['home_val']] / df[['income']], 2)
+df[['house_rep_nofood']] <- round(df[['home_val']] / (df[['income']] - (df[['no_mortgage']] * 12)), 2)
+df[['mortgage_wt']]      <- round(((df[['life_cost']] - df[['no_mortgage']]) * 12) * 100 / df[['income']], 2) 
+df[['rent_wt']]          <- round(df[['rent_cost']] * 12 * 100 / df[['income']], 2)
+df[['firm_size']]        <- round(df[['employed']] / df[['employers']], 1)
+df[['emp_rate']]         <- round((df[['employed']] / ((df[['labor_force']] / 100) * df[['pop_est']])) * 100, 2)
+df[['small_firms']]      <- round(df[['self_employed']] * 100 / df[['pop_est']], 2)
